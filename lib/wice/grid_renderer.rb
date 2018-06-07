@@ -536,7 +536,7 @@ module Wice
     end
 
     def base_link_for_filter(controller, extra_parameters = {})   #:nodoc:
-      new_params = Wice::WgHash.deep_clone controller.params.to_unsafe_h
+      new_params = Wice::WgHash.deep_clone controller.params
       new_params.merge!(extra_parameters)
 
       if new_params[@grid.name]
